@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
  */
 public class Juego {
 
-    private int numIntroducir, intento, numAdivinar, partida = 0;
+    private int numIntroducir, intento, numAdivinar, partida= 0;
 
     public Juego() {
     }
@@ -25,21 +25,21 @@ public class Juego {
     }
 
     public void jugador2() {
-        int numIntro2, intentos2;
-        for (intentos2 = 1; intentos2 <= intento; intentos2++) {
-            numIntro2 = Integer.parseInt(JOptionPane.showInputDialog(null, "Jugador dos.\nIntroduzca un númerp."));
-            while (numIntro2 < 1 || numIntro2 > 50) {
-                numIntro2 = Integer.parseInt(JOptionPane.showInputDialog(null, "Jugador dos.\n Introduzca un número entre 1 y 50."));
+        int numIntro1, intentos1;
+        for (intentos1 = 1; intentos1 <= intento; intentos1++) {
+            numIntro1 = Integer.parseInt(JOptionPane.showInputDialog(null, "Jugador dos.\nIntroduzca un númerp."));
+            while (numIntro1 < 1 || numIntro1 > 50) {
+                numIntro1 = Integer.parseInt(JOptionPane.showInputDialog(null, "Jugador dos.\n Introduzca un número entre 1 y 50."));
             }
-            if (numIntro2 > numAdivinar) {
+            if (numIntro1 > numAdivinar) {
                 JOptionPane.showMessageDialog(null, "El número a adivinar es menor.");
-            } else if (numIntro2 < numAdivinar) {
+            } else if (numIntro1 < numAdivinar) {
                 JOptionPane.showMessageDialog(null, "El número a adivinar es mayor.");
             } else {
                 JOptionPane.showMessageDialog(null, "Bien hecho acertaste");
                 break;
             }
-            if (intentos2 >= intento) {
+            if (intentos1 >= intento) {
                 JOptionPane.showMessageDialog(null, "Lo siento pero perdiste");
             }
 
